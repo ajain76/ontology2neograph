@@ -1,0 +1,376 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns="http://www.ontologydesignpatterns.org/ekp/owl/Criminal.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ekp="http://www.ontologydesignpatterns.org/cp/ekp#"
+    xmlns:mq="http://www.ontologydesignpatterns.org/schemas/dbpediainfoboxmatchingweight.owl#"
+    xmlns:cpa="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:base="http://www.ontologydesignpatterns.org/ekp/owl/Criminal.owl" > 
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/TelevisionShow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">television show</rdfs:label>
+    <rdfs:label xml:lang="fr">émission de télévision</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToTown">
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/birthPlace"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Town</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Town"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Town</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Place"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:label xml:lang="en">links to Town</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Disease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">disease</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="fr">maladie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</mq:dbpediaInfoboxMatchingWeight>
+    <owl:annotatedSource rdf:resource="#linksToCity"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/placeOfDeath"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Person">
+    <rdfs:label xml:lang="de">Person</rdfs:label>
+    <rdfs:label xml:lang="en">person</rdfs:label>
+    <rdfs:label xml:lang="pt">pessoa</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="fr">personne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/MilitaryUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">military unit</rdfs:label>
+    <rdfs:label xml:lang="fr">unité militaire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToAdministrativeRegion">
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/AdministrativeRegion"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:label xml:lang="en">links to Administrative Region</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Administrative Region</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Administrative Region</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToActor">
+    <rdfs:comment xml:lang="en">Relation between Criminal and Actor</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Person"/>
+    <rdfs:label xml:lang="en">links to Actor</rdfs:label>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Actor"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Actor</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Actor">
+    <rdfs:comment>An actor or actress is a person who acts in a dramatic production and who works in film, television, theatre, or radio in that capacity.</rdfs:comment>
+    <rdfs:label xml:lang="fr">acteur</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="de">Schauspieler</rdfs:label>
+    <rdfs:label xml:lang="en">actor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="#linksToCountry"/>
+    <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Country"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Place">
+    <rdfs:label xml:lang="pt">lugar</rdfs:label>
+    <rdfs:label xml:lang="en">place</rdfs:label>
+    <rdfs:label xml:lang="fr">lieu</rdfs:label>
+    <rdfs:label xml:lang="el">περιοχή</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/OfficeHolder">
+    <rdfs:label xml:lang="en">office holder</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="de">Amtsinhaber</rdfs:label>
+    <rdfs:label xml:lang="fr">titulaire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/City">
+    <rdfs:comment>a relatively large and permanent settlement, particularly a large urban settlement</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">city</rdfs:label>
+    <rdfs:label xml:lang="fr">cité</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToBroadcast">
+    <rdfs:label xml:lang="en">links to Broadcast</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Broadcast</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Broadcast</rdfs:comment>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Broadcast"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/birthPlace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</mq:dbpediaInfoboxMatchingWeight>
+    <owl:annotatedSource rdf:resource="#linksToCriminal"/>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/prev"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Criminal">
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:label xml:lang="fr">criminel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">criminal</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdfs:subClassOf rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</mq:dbpediaInfoboxMatchingWeight>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/branch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedSource rdf:resource="#linksToMilitaryUnit"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/prev">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToDrug">
+    <rdfs:label xml:lang="en">links to Drug</rdfs:label>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Drug"/>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Drug"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Drug</rdfs:comment>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Drug</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/parents">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToCity">
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Place"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and City</rdfs:comment>
+    <rdfs:label xml:lang="en">links to City</rdfs:label>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e City</rdfs:comment>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/City"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/placeOfDeath"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Newspaper">
+    <rdfs:comment>A newspaper is a regularly scheduled publication containing news of current events, informative articles, diverse features and advertising. It usually is printed on relatively inexpensive, low-grade paper such as newsprint.</rdfs:comment>
+    <rdfs:comment>Eine Zeitung ist ein Druckwerk von mäßigem Seitenumfang, das in kurzen periodischen Zeitspannen, mindestens einmal wöchentlich, öffentlich erscheint. Die Zeitung ist, anders als die Zeitschrift, ein der Aktualität verpflichtetes Presseorgan und gliedert sich meist in mehrere inhaltliche Rubriken wie Politik, Lokales, Wirtschaft, Sport, Feuilleton und Immobilien.</rdfs:comment>
+    <rdfs:label xml:lang="en">newspaper</rdfs:label>
+    <rdfs:label xml:lang="fr">journal</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.67</mq:dbpediaInfoboxMatchingWeight>
+    <owl:annotatedSource rdf:resource="#linksToCriminal"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/subjectName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToCriminal">
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/parents"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Criminal</rdfs:comment>
+    <rdfs:label xml:lang="en">links to Criminal</rdfs:label>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Criminal</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/prev"/>
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/subjectName"/>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Person"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/after">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</mq:dbpediaInfoboxMatchingWeight>
+    <owl:annotatedSource rdf:resource="#linksToOfficeHolder"/>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/after"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToTelevisionShow">
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Television Show</rdfs:comment>
+    <rdfs:label xml:lang="en">links to Television Show</rdfs:label>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/TelevisionShow"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Television Show</rdfs:comment>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToOfficeHolder">
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Person"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Office Holder</rdfs:comment>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">links to Office Holder</rdfs:label>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/OfficeHolder"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Office Holder</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/after"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToFilm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Film</rdfs:comment>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:label xml:lang="en">links to Film</rdfs:label>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Film</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/City"/>
+    <owl:onProperty rdf:resource="#linksToCity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToDisease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Disease</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Disease"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Disease</rdfs:comment>
+    <rdfs:label xml:lang="en">links to Disease</rdfs:label>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Disease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Organisation">
+    <rdfs:label xml:lang="en">organisation</rdfs:label>
+    <rdfs:label xml:lang="de">Organisation</rdfs:label>
+    <rdfs:label xml:lang="fr">organisation</rdfs:label>
+    <rdfs:label xml:lang="pt">organização</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/branch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/placeOfDeath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToNewspaper">
+    <rdfs:label xml:lang="en">links to Newspaper</rdfs:label>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Newspaper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Newspaper</rdfs:comment>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Newspaper</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/AdministrativeRegion">
+    <rdfs:label xml:lang="fr">région administrative</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">administrative region</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Drug">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">drug</rdfs:label>
+    <rdfs:label xml:lang="fr">médicament</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Work">
+    <rdfs:label xml:lang="en">work</rdfs:label>
+    <rdfs:label xml:lang="pt">obra</rdfs:label>
+    <rdfs:label xml:lang="fr">travail</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/dbpediainfoboxmatchingweight.owl"/>
+    <cpa:hasAuthor>Valentina Presutti</cpa:hasAuthor>
+    <cpa:hasAuthor>Aldo Gangemi</cpa:hasAuthor>
+    <cpa:extractedFrom rdf:resource="http://dbpedia.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <cpa:extractedFrom rdf:resource="http://en.wikipedia.org/"/>
+    <rdfs:comment>An encyclopedic knowledge pattern (EKP) identifying the core knowledge that describes a Criminal</rdfs:comment>
+    <cpa:hasIntent>To model the core knowledge needed to describe a Criminal</cpa:hasIntent>
+    <cpa:hasAuthor>Andrea Giovanni Nuzzolese</cpa:hasAuthor>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Broadcast">
+    <rdfs:label xml:lang="fr">Émission de télévision</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">broadcast</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="el">χώρα</rdfs:label>
+    <rdfs:label xml:lang="de">Staat</rdfs:label>
+    <rdfs:label xml:lang="en">country</rdfs:label>
+    <rdfs:label xml:lang="fr">pays</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.33</mq:dbpediaInfoboxMatchingWeight>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/parents"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    <owl:annotatedSource rdf:resource="#linksToCriminal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Film">
+    <rdfs:label xml:lang="en">film</rdfs:label>
+    <rdfs:label xml:lang="el">ταινία</rdfs:label>
+    <rdfs:label xml:lang="fr">film</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <mq:dbpediaInfoboxMatchingWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</mq:dbpediaInfoboxMatchingWeight>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedTarget rdf:resource="http://dbpedia.org/property/birthPlace"/>
+    <owl:annotatedSource rdf:resource="#linksToTown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToUniversity">
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e University</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">links to University</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and University</rdfs:comment>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/University"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToMilitaryUnit">
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Military Unit</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Military Unit</rdfs:comment>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/MilitaryUnit"/>
+    <rdfs:label xml:lang="en">links to Military Unit</rdfs:label>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <skos:relatedMatch rdf:resource="http://dbpedia.org/property/branch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/property/subjectName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/AdministrativeRegion"/>
+    <owl:onProperty rdf:resource="#linksToAdministrativeRegion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#linksToCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relation between Criminal and Country</rdfs:comment>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Country"/>
+    <rdfs:label xml:lang="en">links to Country</rdfs:label>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Criminal"/>
+    <rdfs:comment xml:lang="it">Relazione tra Criminal e Country</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://dbpedia.org/ontology/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Town">
+    <rdfs:comment>a settlement ranging from a few hundred to several thousand (occasionally hundreds of thousands). The precise meaning varies between countries and is not always a matter of legal definition. Usually, a town is thought of as larger than a village but smaller than a city, though there are exceptions to this rule.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">town</rdfs:label>
+    <rdfs:label xml:lang="fr">ville</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/University">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="fr">université</rdfs:label>
+    <rdfs:label xml:lang="el">πανεπιστήμιο</rdfs:label>
+    <rdfs:label xml:lang="en">university</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY mo "http://purl.org/ontology/mo/" >
+    <!ENTITY wordnet "http://xmlns.com/wordnet/1.6/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY musim "http://purl.org/ontology/musim#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/ontology/musim#"
+     xml:base="http://purl.org/ontology/musim"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:wordnet="http://xmlns.com/wordnet/1.6/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:musim="http://purl.org/ontology/musim#"
+     xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment
+            >This is an ontology to express musical similarity between musical entities whether artists, tracks, albums, compositional styles, sections of tracks, playing techniques...</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/musim#association_of -->
+
+    <owl:ObjectProperty rdf:about="#association_of">
+        <rdfs:comment xml:lang="en"
+            >Specifies to which musim:MusicalThing(s) a musim:Similarity object is referring stating &quot;this similarity relates these two musical things&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="#Association"/>
+        <rdfs:range rdf:resource="#MusicalThing"/>
+        <owl:inverseOf rdf:resource="#has_association"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/musim#has_association -->
+
+    <owl:ObjectProperty rdf:about="#has_association">
+        <rdfs:comment xml:lang="en"
+            >Relates a musim:MusicalThing to a musim:Association stating &quot;this musical thing has this type of association&quot;</rdfs:comment>
+        <rdfs:range rdf:resource="#Association"/>
+        <rdfs:domain rdf:resource="#MusicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/mo/AnalogSignal -->
+
+    <owl:Class rdf:about="&mo;AnalogSignal"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Arrangement -->
+
+    <owl:Class rdf:about="&mo;Arrangement"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Composition -->
+
+    <owl:Class rdf:about="&mo;Composition"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/CorporateBody -->
+
+    <owl:Class rdf:about="&mo;CorporateBody"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/DigitalSignal -->
+
+    <owl:Class rdf:about="&mo;DigitalSignal"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Festival -->
+
+    <owl:Class rdf:about="&mo;Festival"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Instrumentation -->
+
+    <owl:Class rdf:about="&mo;Instrumentation"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Label -->
+
+    <owl:Class rdf:about="&mo;Label"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Libretto -->
+
+    <owl:Class rdf:about="&mo;Libretto"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Lyrics -->
+
+    <owl:Class rdf:about="&mo;Lyrics"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Medium -->
+
+    <owl:Class rdf:about="&mo;Medium"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Movement -->
+
+    <owl:Class rdf:about="&mo;Movement"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicArtist -->
+
+    <owl:Class rdf:about="&mo;MusicArtist"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicGroup -->
+
+    <owl:Class rdf:about="&mo;MusicGroup"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicalExpression -->
+
+    <owl:Class rdf:about="&mo;MusicalExpression"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicalItem -->
+
+    <owl:Class rdf:about="&mo;MusicalItem"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicalManifestation -->
+
+    <owl:Class rdf:about="&mo;MusicalManifestation"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicalWork -->
+
+    <owl:Class rdf:about="&mo;MusicalWork"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Orchestration -->
+
+    <owl:Class rdf:about="&mo;Orchestration"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Performance -->
+
+    <owl:Class rdf:about="&mo;Performance"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Record -->
+
+    <owl:Class rdf:about="&mo;Record"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Recording -->
+
+    <owl:Class rdf:about="&mo;Recording"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Score -->
+
+    <owl:Class rdf:about="&mo;Score"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Show -->
+
+    <owl:Class rdf:about="&mo;Show"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Signal -->
+
+    <owl:Class rdf:about="&mo;Signal"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/SoloMusicArtist -->
+
+    <owl:Class rdf:about="&mo;SoloMusicArtist"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Sound -->
+
+    <owl:Class rdf:about="&mo;Sound"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Track -->
+
+    <owl:Class rdf:about="&mo;Track"/>
+    
+
+
+    <!-- http://purl.org/ontology/musim#AcousticSimilarity -->
+
+    <owl:Class rdf:about="#AcousticSimilarity">
+        <rdfs:subClassOf rdf:resource="#Similarity"/>
+        <rdfs:comment
+            >A similarity statement about the acoustic character of two or more MusicalThings.  This maybe related to audio-based signal analysis results</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/musim#Association -->
+
+    <owl:Class rdf:about="#Association">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en"
+            >An abstract class to define some association between musical things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/musim#ContextualSimilarity -->
+
+    <owl:Class rdf:about="#ContextualSimilarity">
+        <rdfs:subClassOf rdf:resource="#Similarity"/>
+        <rdfs:comment
+            >A similarity statement about the contextual similarity of two or more MusicalThings stating &quot;some MusicalThings are similar because of this Context&quot; for example the MusicalThings share a geographic location, online associations, sub culture affiliations, a time period or other.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/musim#Influence -->
+
+    <owl:Class rdf:about="#Influence">
+        <rdfs:subClassOf rdf:resource="#Association"/>
+		        <rdfs:comment xml:lang="en"
+		            >A concept indicating the influence of one musical thing on another musical thing or several other musical things.
+
+		TODO: this needs to be a directed (asymmetric) concept and this should be reflected in the associated properties</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/musim#MusicalThing -->
+
+    <owl:Class rdf:about="#MusicalThing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&mo;AnalogSignal"/>
+                    <rdf:Description rdf:about="&mo;Arrangement"/>
+                    <rdf:Description rdf:about="&mo;Composition"/>
+                    <rdf:Description rdf:about="&mo;CorporateBody"/>
+                    <rdf:Description rdf:about="&mo;DigitalSignal"/>
+                    <rdf:Description rdf:about="&mo;Festival"/>
+                    <rdf:Description rdf:about="&mo;Instrumentation"/>
+                    <rdf:Description rdf:about="&mo;Label"/>
+                    <rdf:Description rdf:about="&mo;Libretto"/>
+                    <rdf:Description rdf:about="&mo;Lyrics"/>
+                    <rdf:Description rdf:about="&mo;Medium"/>
+                    <rdf:Description rdf:about="&mo;Movement"/>
+                    <rdf:Description rdf:about="&mo;MusicArtist"/>
+                    <rdf:Description rdf:about="&mo;MusicGroup"/>
+                    <rdf:Description rdf:about="&mo;MusicalExpression"/>
+                    <rdf:Description rdf:about="&mo;MusicalItem"/>
+                    <rdf:Description rdf:about="&mo;MusicalManifestation"/>
+                    <rdf:Description rdf:about="&mo;MusicalWork"/>
+                    <rdf:Description rdf:about="&mo;Orchestration"/>
+                    <rdf:Description rdf:about="&mo;Performance"/>
+                    <rdf:Description rdf:about="&mo;Record"/>
+                    <rdf:Description rdf:about="&mo;Recording"/>
+                    <rdf:Description rdf:about="&mo;Score"/>
+                    <rdf:Description rdf:about="&mo;Show"/>
+                    <rdf:Description rdf:about="&mo;Signal"/>
+                    <rdf:Description rdf:about="&mo;SoloMusicArtist"/>
+                    <rdf:Description rdf:about="&mo;Sound"/>
+                    <rdf:Description rdf:about="&mo;Track"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment
+            >An abstract class representing some kind of musical thing.  This class is the union of (owl:unionOf) several relevant classes in the Music Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/musim#Similarity -->
+
+    <owl:Class rdf:about="#Similarity">
+        <rdfs:subClassOf rdf:resource="#Association"/>
+        <rdfs:comment
+            >An abstract class to define similarity, specifically musical similarity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1042) http://owlapi.sourceforge.net -->
+
